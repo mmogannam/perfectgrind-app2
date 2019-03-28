@@ -1,9 +1,14 @@
-# perfectgrind-app2
+## How to install locally
 
-## Project setup
-```
+Once you have dowloaded the files:
+
+cd perfectgrind-api
+
+Install packages and dependencies using npm:
+
 npm install
-```
+
+Run using the following commands:
 
 ### Compiles and hot-reloads for development
 ```
@@ -14,21 +19,7 @@ npm run serve
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

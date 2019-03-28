@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="overflow-auto container-fluid">
+    <DateDisplay/>
+    <div class="h1 float-left m-3">Perfectly Ground Work Orders</div>
+    <b-button @click="showModal" variant="primary" class="float-right m-4">Create Order</b-button>
+    <WorkOrderTable />
+    <WorkOrderModal ref="WorkOrderModal"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import WorkOrderModal from './components/WorkOrderModal.vue';
+  import WorkOrderTable from './components/WorkOrderTable.vue';
+  import DateDisplay from './components/DateDisplay.vue';
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    methods:{
+      showModal(){
+        this.$refs.WorkOrderModal.$refs.WorkOrderModal.show();
+      }
+    },
+    components: {
+      WorkOrderTable,
+      WorkOrderModal,
+      DateDisplay
+    }
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
